@@ -1,0 +1,33 @@
+.main {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main button {
+  padding: 10px;
+
+  font-size: 1.4rem;
+  color: white;
+  background: green;
+}
+
+.main form label {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+
+  font-size: 2rem;
+}
+
+.main form label input {
+  font-size: 2rem;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+}
