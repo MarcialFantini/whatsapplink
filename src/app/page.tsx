@@ -8,6 +8,8 @@ export default function Home() {
   const handlerOnChange = (e: ChangeEvent<HTMLInputElement>) =>
     setState(e.target.value);
 
+  console.log("hola");
+
   const handlerClickCopyText = () => {
     navigator.clipboard.writeText(
       "https://wa.me/" + state.replace(/[\s-]/g, "")
