@@ -5,10 +5,9 @@ import styles from "./page.module.css";
 export default function Home() {
   const [state, setState] = useState("");
 
-  const handlerOnChange = (e: ChangeEvent<HTMLInputElement>) =>
-    setState(e.target.value);
-
-  console.log("hola");
+  const handlerOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setState("https://wa.me/" + e.target.value.replace(/[\s-]/g, ""));
+  };
 
   const handlerClickCopyText = () => {
     navigator.clipboard.writeText(
@@ -29,7 +28,9 @@ export default function Home() {
         </label>
       </form>
 
-      <button onClick={handlerClickCopyText}>{state}</button>
+      <a target="_blank" className={styles.link} href={state}>
+        {state}
+      </a>
     </main>
   );
 }
